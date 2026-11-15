@@ -9,7 +9,7 @@ import (
 func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		host, _ := os.Hostname()
-		fmt.Fprintf(w, "Entorno: %s | Servidor: %s\n", os.Getenv("ENTORNO"), host)
+		fmt.Fprintf(w, "Version 2 | Entorno: %s | Servidor: %s\n", os.Getenv("ENTORNO"), host)
 	})
 	http.ListenAndServe(":8080", nil)
 }
